@@ -14,3 +14,9 @@ with open(file_import, 'r', newline='') as file:
         print(ligne, end="\n")
         tableau.append(ligne)
        
+#écriture dans un csv
+with open(file_output, 'w', newline='') as csvfile:
+    spamwriter = csv.writer(csvfile,delimiter=",")
+    
+    for k in tableau:
+        spamwriter.writerow(k)
